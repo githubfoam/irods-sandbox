@@ -32,14 +32,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
               ansible.playbook = server["server_bootstrap"]
               ansible.inventory_path = 'provisioning/inventory_localconn'
               # ansible.verbose = "vvvv" # debug
-              # ansible.groups = {
-              #  "vgmgmt" => ["vg-mgmt01"],
-              #  "vgmeta" => ["vg-meta01"],
-              #  "vgstorage" => ["vg-storage01","vg-storage02"],
-              #  "vgclients" => ["vg-client01","vg-client02"],
-              #  "vgmons" => ["vg-admon01"],
-              #  "all_groups:children" => ["vgmgmt", "vgmeta", "vgstorage", "vgclients","vgmons"]
-              # }
            end # end if box.vm.provision
           box.vm.provision "shell", inline: <<-SHELL
           echo "===================================================================================="
