@@ -10,15 +10,3 @@
     shell: "timedatectl set-timezone Asia/Tokyo"
   roles:
     - common
-
-# - name: "Boot management hosts"
-#   gather_facts: true
-#   hosts:  grpirods
-#   become: yes
-#   pre_tasks:
-#   - name: "Setting hostname"
-#     shell: "hostnamectl set-hostname {{ inventory_hostname }}"
-#   roles:
-#     - common
-#     - postgresql
-#     - mysql
